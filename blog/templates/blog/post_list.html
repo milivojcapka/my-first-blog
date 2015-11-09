@@ -1,9 +1,21 @@
 <html>
-    <head>
-        <title>Test prvi blog</title>
-    </head>
-    <body>
-        <p>Hi there!</p>
-        <p>It works!</p>
-    </body>
+	<head>
+		<title>TEST123</title>
+	</head>
+	<body>
+		<div>
+			<h1><a href="">TEST123</a></h1>
+		</div>
+
+		<div>
+			{% for post in posts %}
+    			<div>
+        			<h1><a href="">{{ post.title }}</a></h1>
+        			<p>published: {{ post.published_date }}</p>
+        			<p>{{ post.text|linebreaks }}</p>
+    			</div>
+			{% endfor %}
+		</div>
+
+	</body>
 </html>
